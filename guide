@@ -1,0 +1,26 @@
+1. Type openrouter.ai in your browser and register for an account. 
+
+2. Click on settings (upper right corner) THEN scroll down to Default Model and select Deepseek R1 Zero (free).
+
+3. Click the Privacy tab (left menu) and enable Model Training. If you do not enable this, you will be thrown an error when generating a response. 
+
+4. Click on the API Keys tab (left menu) and create a new API key. SAVE the key because once you copy it, you will not be able to see it again. 
+
+5. Return to Janitor.ai and find a proxy compatible bot. 
+   5.1 Proxy compatible bots will usually have 'Proxy ✅' if they are compatible or 'Proxy ❌' is they are not. You will find this indicator 
+        above your persona selector and the "start chat" feature." Compaitble bots also have visible character definitions. 
+
+6. After choosing a bot, open the API Settings from the menu (top right corner) and choose Proxy.
+
+7. Under the Proxy Model settings, choose 'custom' and type deepseek/deepseek-r1:free in the box (MUST be all lowercase).  
+
+8. Under Other API/proxy URL type/paste this exact link https://openrouter.ai/api/v1/chat/completions
+
+9. Finally, under API Key, paste the API key you generated and saved in step 4 otherwise create and paste a NEW API key. 
+
+10. If you do not have any custom prompts you would like to add, click Save Settings. When the pop up asks if you 
+    would like to rest the temperature back to normal, click yes. 
+
+11. Open Generation Settings from the in chat menu (top right corner) and set your temperature and tokens to your preference. 
+
+12. Close all Janitor.ai tabs and reopen them. Now you can start chatting!
