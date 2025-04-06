@@ -19,7 +19,7 @@
 9. Finally, under API Key, paste the API key you generated and saved in step 4 otherwise create and paste a NEW API key. 
 
 10. If you do not have any custom prompts you would like to add, click Save Settings. When the pop up asks if you 
-    would like to rest the temperature back to normal, click yes. 
+    would like to set generation settings to openai's default, click yes. 
 
 11. Open Generation Settings from the in chat menu (top right corner) and set your temperature and tokens to your preference. 
 
