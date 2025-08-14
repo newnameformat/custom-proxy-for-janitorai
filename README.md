@@ -37,15 +37,23 @@ Please note that as of this day, 08.14.2025, this is a current and up-to-date gu
 
 13. Close all Janitor.ai tabs and reopen them (or simply refresh). Now you can start chatting!
 
-</br>
-</br>
+
+<br>
+<br>
+
 ## Making Changes/Adjustments
 Please note that whenever you make changes to your prompts, temperature/tokes/context and/or models, as briefly touched up on below, you will be required to REFRESH the page OR close and reopen the chat. This is because the LLM needs to register these changes in order to execute them and if not refreshed, your requests will get hung up and you will recieve errors. 
-</br>
+
+<br>
+<br>
+
 ## Model Note 
 Openrouter.ai supports dozens of other models so you are not limited to deepseek. You can follow these exact steps to use other models of your choice. You do not need a new API key, you just need to change the path in step 7 to the model's respective path which can be copied directly from the models page. For example, if you would like to use [xAI: Grok 3 Beta](https://openrouter.ai/x-ai/grok-3-beta), you would select the clipboard icon under its name to copy the path ( x-ai/grok-3-beta ) and paste it into the custom field.
 
-</br>
+
+<br>
+<br>
+
 ## Temperature, Token & Context Note
 NOTE: With the changes made to Janitor's chat settings, I have noticed that I have not had to reset my generation settings. HOWEVER, I do recommend checking before you start chatting and read the following:
 
