@@ -37,13 +37,16 @@ Please note that as of this day, 08.14.2025, this is a current and up-to-date gu
 
 13. Close all Janitor.ai tabs and reopen them (or simply refresh). Now you can start chatting!
 
-
+<br>
+<br>
 ## Making Changes/Adjustments
 Please note that whenever you make changes to your prompts, temperature/tokes/context and/or models, as briefly touched up on below, you will be required to REFRESH the page OR close and reopen the chat. This is because the LLM needs to register these changes in order to execute them and if not refreshed, your requests will get hung up and you will recieve errors. 
-
+<br>
 ## Model Note 
 Openrouter.ai supports dozens of other models so you are not limited to deepseek. You can follow these exact steps to use other models of your choice. You do not need a new API key, you just need to change the path in step 7 to the model's respective path which can be copied directly from the models page. For example, if you would like to use [xAI: Grok 3 Beta](https://openrouter.ai/x-ai/grok-3-beta), you would select the clipboard icon under its name to copy the path ( x-ai/grok-3-beta ) and paste it into the custom field.
 
+<br>
 ## Temperature, Token & Context Note
-NOTE: With the changes made to Janitor's chat settings, I have noticed that I have not had to reset my generation settings. HOWEVER, I do recommend checking before you start chatting and to still read the following for better insight:
+NOTE: With the changes made to Janitor's chat settings, I have noticed that I have not had to reset my generation settings. HOWEVER, I do recommend checking before you start chatting and read the following:
+
 Different models will yield different results, you may prefer certain models to others in their ability to produce responses that appeal to your style and liking while also delivering an amazing roleplay experience. Janitor.ai is known for its NSFW content, and some models will not support NSFW content without jailbreaking and custom prompts, even then, it is not guranteed you will receive a decent response. Qwen and Deepseek are decent NSFW models from personal experience. You may also need to adjust the temperature, token and context sliders to receive better responses. I normally set tokens at 0 for deepseek and preferred 1000 (max) when using qwen. So please remember to adjust these settings when trying different models. Each time you change your model, you will be reverted to JLLM's default settings which is a temperature of 1.1 and tokens are 260. You can use the default settings with your new model, but I recommend starting out with a temperature of at least 0.9 and go from there. These settings are accessed in chat under Generation Settings!
