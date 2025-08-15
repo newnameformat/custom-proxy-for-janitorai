@@ -14,9 +14,12 @@ Please note that as of this day, 08.14.2025, this is a current and up-to-date gu
 3. Click the Privacy tab (left menu) and enable Model Training. If you do not enable this, you will be thrown an error when generating a response. 
 
 4. Open a new tab and click on the API Keys tab (left menu) and create a new API key. SAVE the key because once you copy it, you will not be able to see it again.
+
    4.1 If you lose your key, you can always create a new one. 
 
+
 5. Return to [Janitor.ai](https://janitorai.com/) and find a proxy compatible bot. 
+
    5.1 Proxy compatible bots will usually have 'Proxy ✅' if they are compatible or 'Proxy ❌' is they are not. You will find this indicator 
         above your persona selector and the "start chat" feature. Compaitble bots usually have visible character definitions. 
 
@@ -25,14 +28,18 @@ Please note that as of this day, 08.14.2025, this is a current and up-to-date gu
 7. Under the Proxy Model settings, choose 'Add Configuration' and choose your Config Name (anything you want it to be).
    
 8. Under 'Model Name' paste deepseek/deepseek-r1:free in the box (MUST be all lowercase).
-   10.1 When you determine the model you want to use, there is a clipboard icon you can press to copy your model name.
-   10.2 For example, mistralai/mistral-medium-3.1 would be the model name for Mistral: Mistral Medium 3.1
+
+    8.1 When you determine the model you want to use, there is a clipboard icon you can press to copy your model name.
+
+    8.2 For example, mistralai/mistral-medium-3.1 would be the model name for Mistral: Mistral Medium 3.1
 
 9. Under Other API/Proxy URL type/paste this **EXACT** link https://openrouter.ai/api/v1/chat/completions
-   9.1 This WILL NOT change regardless of the model you use. Only if you use a different API provider. 
+
+    9.1 This WILL NOT change regardless of the model you use. Only if you use a different API provider. 
 
 10. Finally, under API Key, paste the API key you generated and saved in step 4; Otherwise create and paste a NEW API key.
-   10.1 Note that while API Keys are listed as 'OPTIONAL,' failure to provide an API key will only throw you errors. 
+
+    10.1 Note that while API Keys are listed as 'OPTIONAL,' failure to provide an API key will only throw you errors. 
 
 11. If you do not have any custom prompts you would like to add, click Save Settings. When/if the pop up asks if you 
     would like to set generation settings to openai's default, click yes. 
