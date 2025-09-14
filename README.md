@@ -3,7 +3,7 @@ Updated 8.14.2025 | Created 04.06.2025
 ![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fnewnameformat%2Fcustom-proxy-for-janitorai&label=Readers&icon=person-check-fill&color=%230d6efd&message=&style=flat&tz=UTC)
 
 # Using Deepseek (& Other Models) on Janitor 
-Please note that as of this day, 08.14.2025, this is a current and up-to-date guide. I do not anticipate any changes that could potentionally alter the required steps and/or render this guide inaccurate or irrelevant. I will keep this guide as up-to-date as possible. This guide will give you step by step instructions on how to Deepseek-r1 on [Janitor.ai](https://janitorai.com/) (our example model) and will work with any model offered by [openrouter.ai](https://openrouter.ai/) platform. Refer to the steps below to get started. 
+Please note that as of this day, 08.14.2025, this is a current and up-to-date guide. I do not anticipate any changes that could potentionally alter the required steps and/or render this guide inaccurate or irrelevant. I will keep this guide as up-to-date as possible. This guide will give you step by step instructions on how to use Deepseek-r1 on [Janitor.ai](https://janitorai.com/) (our example model) and will work with any model offered by [openrouter.ai](https://openrouter.ai/) platform. Refer to the steps below to get started. 
 
 ## Step by Step Guide
 
@@ -53,7 +53,7 @@ Please note that as of this day, 08.14.2025, this is a current and up-to-date gu
 <br>
 
 ## Making Changes/Adjustments
-Please note that whenever you make changes to your prompts, temperature/tokes/context and/or models, as briefly touched up on below, you will be required to REFRESH the page OR close and reopen the chat. This is because the LLM needs to register these changes in order to execute them and if not refreshed, your requests will get hung up and you will recieve errors. 
+Please note that whenever you make changes to your prompts, temperature/tokens/context and/or models, as briefly touched up on below, you will be required to REFRESH the page OR close and reopen the chat. This is because the LLM needs to register these changes in order to execute them and if not refreshed, your requests will get hung up and you will recieve errors. 
 
 
 <br>
