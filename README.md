@@ -1,15 +1,18 @@
-Updated 8.14.2025 | Created 04.06.2025
+Updated 9.27.2025 | Created 04.06.2025
 
 ![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fnewnameformat%2Fcustom-proxy-for-janitorai&label=Readers&icon=person-check-fill&color=%230d6efd&message=&style=flat&tz=UTC)
 
+# Update Regarding Deepseek Models via OpenRouter
+Many of Deepseek's models are provided by Chutes. As of recent changes, users will experience frequent 429 rate-limited upstream errors when attempting to use most Deepseek models. This is because [Chutes](https://chutes.ai/app) is prioritizing their paid tier customers (rightfully so) over Openrouter users (whether or not you have the free/paid tier through Openrouter). Currently, the [V3.1 (free)](https://openrouter.ai/deepseek/deepseek-chat-v3.1:free) model is the only Deepseek model that is mostly uneffected at this time and is a great model overall. Occasionally you may need to refresh or wait a minute before sending another prompt. My suggestion would be to use the V3.1 (free) Deepseek model (or any other LLM, it does NOT have to be Deepseek) unless you would rather subscribe to Chutes / get directly setup with [Deepseek](https://api-docs.deepseek.com/). Just remember that if you have charged the 10$ in credits to your Openrouter account, it is not WASTED money! You still get 1000 requests per day (which is a lot for Janitor) and you still have access to so many LLMs. So you can continue to use the 10$ to maintain your 1000 requests or you can go ahead and spend it on paid models. To those of you who are unfamiliar with Openrouter, the 10$ in credits is NOT required! You can still use the free models. I will also be updated the following steps to reflect V3.1 as our example model.
+
 # Using Deepseek (& Other Models) on Janitor 
-Please note that as of this day, 08.14.2025, this is a current and up-to-date guide. I do not anticipate any changes that could potentionally alter the required steps and/or render this guide inaccurate or irrelevant. I will keep this guide as up-to-date as possible. This guide will give you step by step instructions on how to use Deepseek-r1 on [Janitor.ai](https://janitorai.com/) (our example model) and will work with any model offered by [openrouter.ai](https://openrouter.ai/) platform. Refer to the steps below to get started. 
+Please note that as of this day, 08.14.2025, this is a current and up-to-date guide. I do not anticipate any changes that could potentionally alter the required steps and/or render this guide inaccurate or irrelevant. I will keep this guide as up-to-date as possible. This guide will give you step by step instructions on how to use Deepseek-V3.1 on [Janitor.ai](https://janitorai.com/) (our example model) and will work with any model offered by [openrouter.ai](https://openrouter.ai/) platform. Refer to the steps below to get started. 
 
 ## Step by Step Guide
 
 1. Type openrouter.ai in your browser or [click here](https://openrouter.ai/) and register for an account. 
 
-2. Click on settings (upper right corner) THEN scroll down to Default Model and select Deepseek R1 Zero (free) or your preferred model.
+2. Click on settings (upper right corner) THEN scroll down to Default Model and select Deepseek V3.1 (free) or your preferred model.
 
 3. Click the Privacy tab (left menu) and enable Model Training. If you do not enable this, you will be thrown an error when generating a response. 
 
@@ -27,7 +30,7 @@ Please note that as of this day, 08.14.2025, this is a current and up-to-date gu
 
 7. Under the Proxy Model settings, choose 'Add Configuration' and choose your Config Name (anything you want it to be).
    
-8. Under 'Model Name' paste deepseek/deepseek-r1:free in the box (MUST be all lowercase).
+8. Under 'Model Name' paste deepseek/deepseek-chat-v3.1:free in the box (MUST be all lowercase).
 
     8.1 When you determine the model you want to use, there is a clipboard icon you can press to copy your model name.
 
