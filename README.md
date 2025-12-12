@@ -54,8 +54,8 @@ Please note that as of this day, 12.11.2025, this is a current and up-to-date gu
 <br>
 <br>
 
-## Making Changes/Adjustments
-Please note that whenever you make changes to your prompts, temperature/tokens/context and/or models, as briefly touched up on below, you will be required to REFRESH the page OR close and reopen the chat. This is because the LLM needs to register these changes in order to execute them and if not refreshed, your requests will get hung up and you will recieve errors. 
+## Making Changes/Adjustments (NEW)
+Please note that whenever you make changes to your prompts, temperature/tokens/context and/or models, as briefly touched up on below, you will be required to REFRESH the page OR close and reopen the chat. This is because the LLM needs to register these changes in order to execute them and if not refreshed, your requests will get hung up and you will recieve errors. Janitor has also included a new feature where you can set up and switch between multiple proxy configurations. Want to try new generation settings without making changes to your current prox? You can now duplicate current proxies and experiment with different temperatures/prompts without losing your current configurations. Simply open the menu and choose API Settings, you can then COPY a current configuration for experimenting or create a new one from scratch. 
 
 
 <br>
