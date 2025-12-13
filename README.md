@@ -72,7 +72,9 @@ NOTE: With the changes made to Janitor's chat settings, I have noticed that I ha
 
 Different models will yield different results, you may prefer certain models to others in their ability to produce responses that appeal to your style and liking while also delivering an amazing roleplay experience. Janitor.ai is known for its NSFW content, and some models will not support NSFW content without jailbreaking and custom prompts, even then, it is not guranteed you will receive a decent response. Qwen and Deepseek are decent NSFW models from personal experience. You may also need to adjust the temperature, token and context sliders to receive better responses. I normally set tokens at 0 for deepseek and preferred 1000 (max) when using qwen. So please remember to adjust these settings when trying different models. Each time you change your model, you will be reverted to JLLM's default settings which is a temperature of 1.1 and tokens are 260. You can use the default settings with your new model, but I recommend starting out with a temperature of at least 0.1 and go from there. These settings are accessed in chat under Generation Settings!
 
+<br>
 **Just Remeber:**
+
 Low temp = logical responses 
 
 High temp = more creative responses
