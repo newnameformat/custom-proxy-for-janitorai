@@ -74,4 +74,5 @@ Different models will yield different results, you may prefer certain models to 
 
 **Just Remeber:**
 Low temp = logical responses 
+
 High temp = more creative responses
