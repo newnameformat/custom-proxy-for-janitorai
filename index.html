@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janitor AI Custom Proxies</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Custom Proxies for Janitor AI</h1>
+            <p class="subtitle">A Simple Guide to Using Deepseek & Other LLMs Via Openrouter</p>
+        </div>
+    </header>
+
+    <!-- Updates Dropdown Section -->
+    <div class="updates-banner">
+        <div class="container">
+            <button class="updates-toggle" onclick="toggleUpdates()">
+                <span class="icon">📢</span>
+                <span class="text">Latest Updates & Announcements</span>
+                <span class="arrow" id="arrow">▼</span>
+            </button>
+            <div class="updates-content" id="updatesContent">
+                <div class="update-item">
+                    <span class="date">December 20, 2025</span>
+                    <h3>⚠️ Important Update: Deepseek Models & Chutes</h3>
+                    <p>Many of Deepseek's models are provided by Chutes. As of mid 2025, users were experiencing frequent 429 rate-limited errors when attempting to use most Deepseek models. This is because Chutes is prioritizing their paid tier customers over Openrouter users (whether or not you have the free/paid tier through Openrouter).</p>
+                    
+                    <p>You can visit the Models tab to view free and working Deepseek models that will be updated monthly. My suggestion would be to use those models (or a model of your choice) unless you would rather subscribe to Chutes / get directly setup with Deepseek.</p>
+                    
+                    <p>If you have charged the $10 in credits to your Openrouter account, it is NOT wasted money! You get 1000 requests per day (free or paid models) and have access to so many LLMs. You can use the $10 to maintain your 1000 requests or you can spend it on paid models (Deepseek paid models still receive 429 errors but aren't entirely disruptive).</p>
+                    
+                    <p>To those of you who are unfamiliar with Openrouter, the 10$ in credits is NOT required! You can still use the free models.</p>
+                    
+                    <p><strong>Please Note:</strong> As of this day, 12.11.2025, this is a current and up-to-date guide. I do not anticipate any changes that could potentially alter the required steps and/or render this guide inaccurate or irrelevant. I will keep this guide as up-to-date as possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <a href="#what">Getting Started</a>
+            <a href="#how">Model Settings</a>
+            <a href="#examples">Models</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="what" class="card">
+            <h2>⚙️ Getting Started</h2>
+            <p>Because of the recent changes regarding Deepseek, we will be using <a href="https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free" target="_blank">TNG: Deepseek R1T2 Chimera (free)</a> as our example model. Currently, as of December 2025, the only other free model is Deepseek's R1 0528 (free) which is provided by ModelRun and has been throwing several 400 errors due to the model's token limit being exceeded after so many messages. This model is one of the few free and reliable Deepseek related options available. Follow these steps to set up your custom proxy for Janitor AI using OpenRouter:</p>
+            
+            <ol class="getting-started-steps">
+                <li>Type <strong>openrouter.ai</strong> in your browser or <a href="https://openrouter.ai" target="_blank">click here</a> and register for an account.</li>
+                
+                <li>Click on <strong>settings</strong> (upper right corner) THEN scroll down to <strong>Default Model</strong> and select <strong><a href="https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free" target="_blank">TNG: DeepSeek R1T2 Chimera (free)</a></strong> or your preferred model.</li>
+                
+                <li>Click the <strong>Privacy</strong> tab (left menu) and enable <strong>Model Training</strong>. If you do not enable this, you will be thrown an error when generating a response.</li>
+                
+                <li>Open a new tab and click on the <strong>API Keys</strong> tab (left menu) and create a new API key. SAVE the key because once you copy it, you will not be able to see it again.
+                    <ul class="sub-steps">
+                        <li>If you lose your key, you can always create a new one.</li>
+                    </ul>
+                </li>
+                
+                <li>Return to <strong>Janitor.ai</strong> and find a proxy compatible bot.
+                    <ul class="sub-steps">
+                        <li>Proxy compatible bots will show "proxy allowed" text above the persona selector/start chat feature. Compatible bots usually have visible character definitions.</li>
+                    </ul>
+                </li>
+                
+                <li>After choosing a bot, open the <strong>API Settings</strong> from the menu (top right corner) and choose <strong>Proxy</strong>.</li>
+                
+                <li>Under the <strong>Proxy Model settings</strong>, choose <strong>'Add Configuration'</strong> and choose your Config Name (anything you want it to be).
+                    <ul class="sub-steps">
+                        <li>You can create multiple configurations which is great for experimenting without changing your current configuration.</li>
+                    </ul>
+                </li>
+                
+                <li>Under <strong>'Model Name'</strong> paste <code>tngtech/deepseek-r1t2-chimera:free</code> in the box (MUST be all lowercase).
+                    <ul class="sub-steps">
+                        <li>When you determine the model you want to use, there is a clipboard icon you can press to copy your model name.</li>
+                        <li>For example, <code>mistralai/mistral-medium-3.1</code> would be the model name for Mistral: Mistral Medium 3.1</li>
+                    </ul>
+                </li>
+                
+                <li>Under <strong>Other API/Proxy URL</strong> type/paste this EXACT link: <code>https://openrouter.ai/api/v1/chat/completions</code>
+                    <ul class="sub-steps">
+                        <li>This WILL NOT change regardless of the model you use. Only if you use a different API provider.</li>
+                    </ul>
+                </li>
+                
+                <li>Finally, under <strong>API Key</strong>, paste the API key you generated and saved in step 4; Otherwise create and paste a NEW API key.
+                    <ul class="sub-steps">
+                        <li>Note that while API Keys are listed as 'OPTIONAL,' failure to provide an API key will only throw you errors.</li>
+                    </ul>
+                </li>
+                
+                <li>If you do not have any custom prompts you would like to add, click <strong>Save Settings</strong>. When/if the pop up asks if you would like to set generation settings to openai's default, click yes.</li>
+                
+                <li>Open <strong>Generation Settings</strong> from the in chat menu (top right corner) and set your temperature and tokens to your preference.</li>
+                
+                <li>Close all Janitor.ai tabs and reopen them (or simply refresh). Now you can start chatting!</li>
+            </ol>
+        </section>
+
+        <section id="how" class="card">
+            <h2>⚙️ Understanding Models & Settings</h2>
+            
+            <h3>Model Selection</h3>
+            <p>Different models will yield different results. You may prefer certain models based on their ability to produce responses that match your style and deliver an amazing roleplay experience. <strong>Janitor.ai</strong> is known for its NSFW content, and some models won't support NSFW without jailbreaking and custom prompts—even then, decent responses aren't guaranteed. From personal experience, <strong>Qwen</strong> and <strong>Deepseek</strong> are solid NSFW-friendly models.</p>
+            
+            <h3>Key Settings Explained</h3>
+            <div class="settings-info">
+                <p><strong>Temperature:</strong> Controls the randomness and creativity of responses. Where you set your temperature determines how logical or creative your response will be.</p>
+                <ul>
+                    <li>Low temp (0.1-0.5) = More logical, focused, and consistent responses</li>
+                    <li>High temp (0.8-1.5+) = More creative, varied, and unpredictable responses</li>
+                </ul>
+                
+                <p><strong>Tokens & Context Window:</strong> Tokens are the fundamental units (words, sub-words, characters) LLMs process, while the context window is the limit on how many tokens (input prompt + generated output) the model can handle at once.</p>
+            </div>
+            
+            <h3>Recommended Settings</h3>
+            <p>I normally set tokens at 0 for Deepseek and preferred 1000 (max) when using Qwen. Each time you change your model, you'll be reverted to JLLM's default settings (temperature: 1.1, tokens: 260). You can use defaults, but I recommend starting with a temperature of at least 0.1 and adjusting for each new model. Access these settings in chat under <strong>Generation Settings</strong>.</p>
+            
+            <div class="highlight">
+                <strong>💡 Pro Tip:</strong> Experiment with different models and settings to find what works best for your roleplay style. Remember to adjust settings when switching models!
+            </div>
+        </section>
+
+        <section id="examples" class="card">
+            <h2>🌟 Popular Examples</h2>
+            <h3>Note:</h3>
+            <p>With the loss of free Deepseek models and the many changes regarding providers, this is currently the only model that I recommend until further notice. I have not had time to test many models in a while. This model currently does haev any errors or strict limitations (memory wise) and can handle NSFW content.</p>
+            <div class="examples-grid">
+                <div class="example-box">
+                        <a href="https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free" target="_blank" style="text-decoration:none;color:inherit;">
+                            <h3>TNG: DeepSeek R1T2 Chimera (free)</h3>
+                        </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with 💖 for roleplayers</p>
+            <p class="small">by lil ree</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleUpdates() {
+            const content = document.getElementById('updatesContent');
+            const arrow = document.getElementById('arrow');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
