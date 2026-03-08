@@ -3,6 +3,7 @@ nav .container {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 * {
@@ -11,18 +12,82 @@ nav .container {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.app-download-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #de5c9d, #ff7eb3);
+    border-radius: 999px;
+    padding: 7px 14px;
+    box-shadow: 0 4px 15px rgba(222, 92, 157, 0.4);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: appPulse 2s infinite;
+}
+
+.app-download-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(222, 92, 157, 0.55);
+}
+
+.app-download-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.app-download-text {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.reader-counter {
+    max-width: 145px;
+    width: auto;
+    height: auto;
+    align-self: center;
 }
 
 
@@ -223,6 +288,7 @@ main {
 .card p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    overflow-wrap: anywhere;
 }
 
 .card ul, .card ol {
@@ -233,6 +299,7 @@ main {
 .card li {
     margin: 0.5rem 0;
     font-size: 1.05rem;
+    overflow-wrap: anywhere;
 }
 
 
@@ -430,26 +497,209 @@ footer p {
     }
 }
 
+@keyframes appPulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2.15rem;
+    }
+
+    .subtitle {
+        font-size: 1.05rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .card h2 {
+        font-size: 1.75rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 1rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    main {
+        padding: 1.4rem 0;
+    }
+
     header h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+        line-height: 1.2;
     }
     
     .subtitle {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .updates-banner {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .updates-toggle {
+        padding: 0.85rem 1rem;
+        gap: 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    .updates-toggle .icon {
+        font-size: 1.2rem;
+    }
+
+    .updates-toggle .text {
+        line-height: 1.3;
+    }
+
+    .update-item {
+        padding: 1.2rem;
+    }
+
+    .update-item h3 {
         font-size: 1rem;
+    }
+
+    .update-item p {
+        font-size: 0.88rem;
+    }
+
+    nav {
+        padding: 0.8rem 0;
+    }
+
+    nav .container {
+        gap: 0.35rem;
     }
     
     nav a {
-        display: block;
-        margin: 0.5rem 0;
+        display: inline-block;
+        margin: 0;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.92rem;
     }
     
     .card {
-        padding: 1.5rem;
+        padding: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .card h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .card ul,
+    .card ol {
+        margin-left: 1.1rem;
+    }
+
+    .highlight {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .getting-started-steps > li {
+        padding: 1rem 1rem 1rem 3rem;
+        margin: 0.95rem 0;
+    }
+
+    .getting-started-steps > li::before {
+        width: 1.7rem;
+        height: 1.7rem;
+        left: 0.65rem;
+        top: 1rem;
+        font-size: 0.82rem;
+    }
+
+    .getting-started-steps code {
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
     }
     
     .examples-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .example-box {
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    .app-download-widget {
+        top: auto;
+        bottom: 14px;
+        right: 14px;
+        gap: 6px;
+    }
+
+    .app-download-button {
+        padding: 6px 12px;
+        gap: 7px;
+    }
+
+    .app-download-logo {
+        width: 26px;
+        height: 26px;
+    }
+
+    .app-download-text {
+        font-size: 0.62rem;
+    }
+
+    .reader-counter {
+        max-width: 130px;
+    }
+
+    footer {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-download-text {
+        display: none;
+    }
+
+    .app-download-button {
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .app-download-logo {
+        width: 28px;
+        height: 28px;
     }
 }
