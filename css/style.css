@@ -40,36 +40,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .app-download-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     text-decoration: none;
     color: #fff;
-    background: linear-gradient(135deg, #de5c9d, #ff7eb3);
+    background: linear-gradient(135deg, #151516, #282c30);
     border-radius: 999px;
     padding: 7px 14px;
-    box-shadow: 0 4px 15px rgba(222, 92, 157, 0.4);
+    box-shadow: 0 4px 15px rgba(30, 32, 36, 0.45);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     animation: appPulse 2s infinite;
 }
 
 .app-download-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(222, 92, 157, 0.55);
+    box-shadow: 0 8px 25px rgba(27, 29, 32, 0.6);
 }
 
 .app-download-logo {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
     display: block;
     object-fit: contain;
-    background: #ffffff;
-    padding: 2px;
+    object-position: center;
+    background: transparent;
+    padding: 0;
+    flex-shrink: 0;
 }
 
 .app-download-text {
@@ -703,4 +705,3 @@ footer p {
         height: 28px;
     }
 }
-
