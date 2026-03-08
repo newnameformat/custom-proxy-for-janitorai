@@ -63,8 +63,8 @@ body {
 }
 
 .app-download-logo {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: block;
     object-fit: contain;
@@ -703,3 +703,4 @@ footer p {
         height: 28px;
     }
 }
+
