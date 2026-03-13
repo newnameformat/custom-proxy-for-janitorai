@@ -1,0 +1,707 @@
+nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-download-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.app-download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #151516, #282c30);
+    border-radius: 999px;
+    padding: 7px 14px;
+    box-shadow: 0 4px 15px rgba(30, 32, 36, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: appPulse 2s infinite;
+}
+
+.app-download-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(27, 29, 32, 0.6);
+}
+
+.app-download-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.app-download-text {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.reader-counter {
+    max-width: 145px;
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 0.8s ease;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    animation: fadeInUp 0.8s ease;
+}
+
+
+.updates-banner {
+    background: transparent;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.updates-toggle {
+    width: 100%;
+    background: white;
+    border: 3px solid #667eea;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #667eea;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.updates-toggle:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.updates-toggle:active {
+    transform: translateY(-1px);
+}
+
+.updates-toggle .icon {
+    font-size: 1.4rem;
+    animation: pulse 2s infinite;
+}
+
+.updates-toggle .text {
+    flex: 1;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+.updates-toggle .arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.updates-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-top 0.3s ease;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.updates-content.active {
+    margin-top: 0.5rem;
+}
+
+.update-item {
+    padding: 1.75rem;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.15);
+    background: linear-gradient(to right, rgba(102, 126, 234, 0.02), transparent);
+}
+
+.update-item:first-child {
+    border-radius: 15px 15px 0 0;
+}
+
+.update-item:last-child {
+    border-bottom: none;
+    border-radius: 0 0 15px 15px;
+}
+
+.update-item .date {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.update-item h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.update-item p {
+    color: #555;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+.update-item p:last-child {
+    margin-bottom: 0;
+}
+
+.update-item strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+main {
+    padding: 2rem 0;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease;
+}
+
+.card h2 {
+    color: #667eea;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
+}
+
+.card ul, .card ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card li {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+}
+
+
+.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+
+.fun-fact {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+}
+
+
+.getting-started-steps {
+    counter-reset: step-counter;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.getting-started-steps > li {
+    counter-increment: step-counter;
+    position: relative;
+    padding: 1.25rem 1.5rem 1.25rem 4rem;
+    margin: 1.25rem 0;
+    background: linear-gradient(to right, rgba(102, 126, 234, 0.05), transparent);
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.7;
+    transition: all 0.3s ease;
+}
+
+.getting-started-steps > li:hover {
+    background: linear-gradient(to right, rgba(102, 126, 234, 0.1), transparent);
+    transform: translateX(5px);
+}
+
+.getting-started-steps > li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 1rem;
+    top: 1.25rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.getting-started-steps strong {
+    color: #000;
+    font-weight: 700;
+}
+
+.getting-started-steps code {
+    background: rgba(102, 126, 234, 0.1);
+    color: #764ba2;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.getting-started-steps a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.getting-started-steps a:hover {
+    border-bottom-color: #667eea;
+}
+
+.sub-steps {
+    list-style: none;
+    margin: 0.75rem 0 0 0;
+    padding-left: 0;
+}
+
+.sub-steps li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.sub-steps li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.example-box {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    min-width: 180px;
+    max-width: 220px;
+    cursor: pointer;
+}
+
+.example-box:hover {
+    transform: translateY(-5px);
+}
+
+.example-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+
+footer {
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.small {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes appPulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2.15rem;
+    }
+
+    .subtitle {
+        font-size: 1.05rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .card h2 {
+        font-size: 1.75rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    main {
+        padding: 1.4rem 0;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .updates-banner {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .updates-toggle {
+        padding: 0.85rem 1rem;
+        gap: 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    .updates-toggle .icon {
+        font-size: 1.2rem;
+    }
+
+    .updates-toggle .text {
+        line-height: 1.3;
+    }
+
+    .update-item {
+        padding: 1.2rem;
+    }
+
+    .update-item h3 {
+        font-size: 1rem;
+    }
+
+    .update-item p {
+        font-size: 0.88rem;
+    }
+
+    nav {
+        padding: 0.8rem 0;
+    }
+
+    nav .container {
+        gap: 0.35rem;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 0;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.92rem;
+    }
+    
+    .card {
+        padding: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .card h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .card ul,
+    .card ol {
+        margin-left: 1.1rem;
+    }
+
+    .highlight {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .getting-started-steps > li {
+        padding: 1rem 1rem 1rem 3rem;
+        margin: 0.95rem 0;
+    }
+
+    .getting-started-steps > li::before {
+        width: 1.7rem;
+        height: 1.7rem;
+        left: 0.65rem;
+        top: 1rem;
+        font-size: 0.82rem;
+    }
+
+    .getting-started-steps code {
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .examples-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .example-box {
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    .app-download-widget {
+        top: auto;
+        bottom: 14px;
+        right: 14px;
+        gap: 6px;
+    }
+
+    .app-download-button {
+        padding: 6px 12px;
+        gap: 7px;
+    }
+
+    .app-download-logo {
+        width: 26px;
+        height: 26px;
+    }
+
+    .app-download-text {
+        font-size: 0.62rem;
+    }
+
+    .reader-counter {
+        max-width: 130px;
+    }
+
+    footer {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-download-text {
+        display: none;
+    }
+
+    .app-download-button {
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .app-download-logo {
+        width: 28px;
+        height: 28px;
+    }
+}
