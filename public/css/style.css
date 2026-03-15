@@ -505,9 +505,15 @@ main {
 
 .examples-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 220px));
     gap: 1.5rem;
     margin-top: 2rem;
+    justify-content: start;
+}
+
+.examples-grid > * {
+    width: 220px;
+    max-width: 220px;
 }
 
 .example-box {
@@ -518,9 +524,10 @@ main {
     text-align: center;
     transition: transform 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    min-width: 180px;
+    display: block;
+    width: 220px;
     max-width: 220px;
+    min-height: 100%;
     cursor: pointer;
 }
 
@@ -614,6 +621,16 @@ footer p {
     .card p,
     .card li {
         font-size: 1rem;
+    }
+
+    .examples-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 220px));
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .example-box {
+        width: 220px;
     }
 }
 
@@ -741,16 +758,16 @@ footer p {
         white-space: normal;
         word-break: break-word;
     }
-    
+
     .examples-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 220px;
+        justify-content: center;
         gap: 1rem;
     }
 
     .example-box {
-        min-width: 0;
-        max-width: none;
-        width: 100%;
+        width: 220px;
+        max-width: 220px;
     }
 
     .app-download-widget {
