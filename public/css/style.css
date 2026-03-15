@@ -229,6 +229,91 @@ header h1 {
     font-weight: 600;
 }
 
+.archive-link-wrap {
+    padding: 0 1.75rem 1.5rem;
+    margin: 0;
+}
+
+.archive-link {
+    color: #5b4ecf;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(91, 78, 207, 0.35);
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.archive-link:hover {
+    color: #2f2fa7;
+    border-bottom-color: rgba(47, 47, 167, 0.8);
+}
+
+.archive-page-main {
+    padding-top: 1.25rem;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background: #667eea;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.back-button:hover {
+    background: #5a6ed0;
+    transform: translateY(-1px);
+}
+
+.archive-only-card h2 {
+    margin-top: 0.2rem;
+}
+
+.archive-entry {
+    border: none;
+    border-bottom: none;
+    border-radius: 12px;
+    margin-bottom: 0.95rem;
+}
+
+.archive-only-card .archive-entry:first-child,
+.archive-only-card .archive-entry:last-child {
+    border-radius: 12px;
+    border-bottom: none;
+}
+
+.archive-summary {
+    color: #4f4f63;
+    margin-bottom: 1rem;
+}
+
+.archive-toggle {
+    background: #f1f4ff;
+    border: 1px solid rgba(102, 126, 234, 0.35);
+    color: #4457bf;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.archive-toggle:hover {
+    background: #667eea;
+    color: #fff;
+    border-color: #667eea;
+}
+
+.archive-details {
+    margin-top: 1rem;
+    border-top: 1px dashed rgba(102, 126, 234, 0.3);
+    padding-top: 1rem;
+}
+
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -573,6 +658,15 @@ footer p {
 
     .update-item {
         padding: 1.2rem;
+    }
+
+    .archive-link-wrap {
+        padding: 0 1.2rem 1.2rem;
+    }
+
+    .archive-toggle {
+        width: 100%;
+        max-width: 180px;
     }
 
     .update-item h3 {

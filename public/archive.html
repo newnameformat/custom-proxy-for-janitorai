@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archived Announcements | Janitor AI Custom Proxies</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- App Download + Reader Counter - Top Right Corner -->
+    <div class="app-download-widget">
+        <a class="app-download-button" href="https://janitorai.com/app-download" target="_blank" title="Download Janitor AI App">
+            <img src="images/janitor app logo.webp" alt="Download Janitor AI App" class="app-download-logo">
+            <span class="app-download-text">Download the App</span>
+        </a>
+        <img class="reader-counter" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fcustom-proxy-for-janitorai.vercel.app%2F&label=Readers&icon=person-fill-check&color=%23de5c9d&message=&style=plastic&tz=EST" alt="Reader Counter">
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>Archived Announcements</h1>
+            <p class="subtitle">Older updates from this guide</p>
+        </div>
+    </header>
+
+    <main class="container archive-page-main">
+        <section class="card archive-only-card">
+            <a class="back-button" href="index.html">← Back to Main Guide</a>
+
+            <div class="update-item archive-entry">
+                <span class="date">December 20, 2025</span>
+                <h3>⚠️ Important Update: Deepseek Models & Chutes</h3>
+                <p class="archive-summary">Many Deepseek models were returning frequent 429 errors because Chutes prioritized paid-tier traffic. Expand to read the full note and recommendations.</p>
+                <button class="archive-toggle" type="button" aria-expanded="false">Show more</button>
+
+                <div class="archive-details" hidden>
+                    <p>Many of Deepseek's models are provided by Chutes. As of mid 2025, users were experiencing frequent 429 rate-limited errors when attempting to use most Deepseek models. This is because Chutes is prioritizing their paid tier customers over Openrouter users (whether or not you have the free/paid tier through Openrouter).</p>
+
+                    <p>You can visit the Models tab to view free and working Deepseek models that will be updated monthly. My suggestion would be to use those models (or a model of your choice) unless you would rather subscribe to Chutes / get directly setup with Deepseek.</p>
+
+                    <p>If you have charged the $10 in credits to your Openrouter account, it is NOT wasted money! You get 1000 requests per day (free or paid models) and have access to so many LLMs. You can use the $10 to maintain your 1000 requests or you can spend it on paid models (Deepseek paid models still receive 429 errors but aren't entirely disruptive).</p>
+
+                    <p>To those of you who are unfamiliar with Openrouter, the 10$ in credits is NOT required! You can still use the free models.</p>
+
+                    <p><strong>Please Note:</strong> As of this day, 12.11.2025, this is a current and up-to-date guide. I do not anticipate any changes that could potentially alter the required steps and/or render this guide inaccurate or irrelevant. I will keep this guide as up-to-date as possible.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with 💖 for roleplayers</p>
+            <p class="small">by lil ree</p>
+        </div>
+    </footer>
+
+    <script>
+        const archiveToggleButtons = document.querySelectorAll('.archive-toggle');
+
+        archiveToggleButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const details = button.nextElementSibling;
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                button.setAttribute('aria-expanded', String(!isExpanded));
+                button.textContent = isExpanded ? 'Show more' : 'Show less';
+                details.hidden = isExpanded;
+            });
+        });
+    </script>
+</body>
+</html>
